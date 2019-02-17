@@ -4,8 +4,12 @@
 #猜錯的話 要告訴他 比答案大or小
 
 import random
+start = input('請決定隨機數字範圍最小值')
+end = input('請決定隨機數字範圍最大值')
+start = int(start)
+end = int(end)
 
-r = random.randint(1, 100)
+r = random.randint(start, end)
 count = 0
 while True:
 	count += 1 # count = count + 1
@@ -13,6 +17,7 @@ while True:
 	num = int(num)
 	if num == r:
 		print('你猜對了!')
+		print('這是你猜的第', count,'次')
 		break
 	elif num < r:
 		print('你猜得比答案還小')
